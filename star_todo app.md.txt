@@ -1,0 +1,154 @@
+# Project Brief: Task Manager Web Application
+
+## Role
+You are a senior front-end engineer building a **production-grade, portfolio-quality** web application. Do not produce a basic tutorial-style to-do app — this must look and function like a real product a company would ship.
+
+## Objective
+Build a modern, premium, fully responsive **To-Do List / Task Manager** as a static web app (no backend, no build tools required).
+
+---
+
+## 1. Tech Stack & Project Structure
+
+**Stack:** HTML5, CSS3, Vanilla JavaScript, LocalStorage for persistence. No frameworks unless strictly necessary.
+
+**Structure:**
+```
+todo-task-manager/
+├── index.html
+├── style.css
+├── script.js
+├── README.md
+└── assets/
+```
+
+---
+
+## 2. UI / Design Requirements
+
+- Clean, minimal, dashboard-style interface suitable for a GitHub portfolio
+- Fully responsive: mobile, tablet, desktop
+- Modern cards with subtle shadows, rounded corners, smooth hover/transition animations
+- Professional typography and icon usage
+- Light Mode and Dark Mode, with the selected theme persisted in LocalStorage
+- Accessible and keyboard-friendly (proper focus states, ARIA where relevant)
+
+---
+
+## 3. Core Features — Full CRUD
+
+### Create
+- Add new task with: Title, Description, Due Date, Priority (Low/Medium/High), Category
+- Validate required fields before submission; disable submit button until valid
+
+### Read
+- Display tasks as cards showing: Title, Description, Category, Priority, Due Date, Completion Status, Created Date
+
+### Update
+- Edit any task field (title, description, priority, category, due date)
+- Toggle completed/uncompleted status
+
+### Delete
+- Delete individual tasks with a confirmation modal
+- "Clear Completed" bulk action
+
+---
+
+## 4. Filtering & Search
+
+- **Status filters:** All / Active / Completed / Overdue
+- **Category filter** and **Priority filter**
+- **Live search bar** across Title, Description, and Category (updates as the user types)
+
+---
+
+## 5. Dashboard Statistics
+
+Show at the top of the app, auto-updating whenever tasks change:
+- Total Tasks
+- Active Tasks
+- Completed Tasks
+- Overdue Tasks
+- Completion percentage with a progress bar
+
+---
+
+## 6. Sorting
+
+Support sorting by: Newest, Oldest, Due Date, Priority, Alphabetical (A–Z)
+
+---
+
+## 7. Data Persistence (LocalStorage)
+
+- Tasks persist across page refreshes
+- Theme preference persists across page refreshes
+- Gracefully handle missing, empty, or corrupted LocalStorage data (no crashes)
+
+---
+
+## 8. UX Details
+
+- Empty-state screen when there are no tasks
+- Toast/notification on add, update, and delete (with confirmation before delete)
+- Clear visual indicators for completed and overdue tasks
+- Smooth enter/exit animations when tasks are added or removed
+- Keyboard shortcut to open the "Add Task" form
+- Enter key quickly submits a new task
+- Overdue detection computed automatically against the current date
+
+---
+
+## 9. Responsive Layout Behavior
+
+| Breakpoint | Layout |
+|---|---|
+| Desktop | Sidebar/navigation + main dashboard + stats cards + task list |
+| Tablet | Adapted multi-column layout |
+| Mobile | Single column, touch-friendly cards, mobile-optimized modal/form |
+
+---
+
+## 10. Code Quality Requirements
+
+Write clean, modular, well-commented JavaScript. At minimum, implement these functions:
+
+```
+addTask()
+renderTasks()
+updateTask()
+deleteTask()
+toggleTaskStatus()
+filterTasks()
+searchTasks()
+sortTasks()
+saveTasks()
+loadTasks()
+updateStatistics()
+```
+
+Avoid duplicated logic; comment only where it aids understanding (not line-by-line noise).
+
+---
+
+## 11. README.md Requirements
+
+Include: Project title, description, features list, technologies used, screenshots section, installation steps, how to run locally, project structure, future improvements, and an author section.
+
+---
+
+## 12. Definition of Done — Pre-Delivery Checklist
+
+Before considering the project complete, verify:
+
+- [ ] Every button and interactive element works
+- [ ] Add, Edit, Complete, Delete, and Search all function correctly
+- [ ] All filters and sort options work as expected
+- [ ] LocalStorage persistence verified across refresh
+- [ ] Light/Dark mode persists across refresh
+- [ ] Fully responsive on mobile, tablet, and desktop
+- [ ] Zero JavaScript console errors
+- [ ] No broken links or missing files
+- [ ] Final UI is polished and portfolio-ready
+
+**Deliverable standard:** a real-world, production-ready task management application — not a tutorial demo.
